@@ -1,10 +1,16 @@
 <script>
-import { WButton } from "@/WatchUI";
+import { WButton, WTips, WTitle } from "@/WatchUI";
 export default {
-  components: { WButton },
+  components: { WButton, WTips, WTitle },  
 };
 </script>
 
 <template>
-  <WButton>6</WButton>
+  <div class="app">
+  <WTips>按钮</WTips>
+  <WButton>Default</WButton>
+  <WButton type="primary">
+    Primary
+  </WButton>
+  </div>
 </template>
