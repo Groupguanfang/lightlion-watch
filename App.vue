@@ -1,13 +1,6 @@
-<script>
-import Buttons from "@/Examples/Buttons.vue"
-export default {
-  components: { Buttons }
-};
-</script>
-
 <template>
   <div class="app">
-    <Buttons />
+    <router-view />
   </div>
 </template>
 
