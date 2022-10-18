@@ -1,3 +1,7 @@
 :root {
-  --radius: 
+  --radius: 16px;
+  --default: #242424;
+  --primary: #4693FF;
+  --secondary: #454648;
+  --danger: #FE3C30;
 }
