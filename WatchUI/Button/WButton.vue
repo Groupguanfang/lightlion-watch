@@ -6,7 +6,9 @@
       w_button_radius: isRadius,
       w_button_danger: isDanger,
       w_button_secondary: isSec,
-      w_button_small: isSmall
+      w_button_small: isSmall,
+      w_button_left: isSmallLeft,
+      w_button_right: isSmallRight
     }"
   >
     <button><slot /></button>
@@ -23,6 +25,8 @@ export default {
       isDanger: false,
       isSec: false,
       isSmall: false,
+      isSmallLeft: false,
+      isSmallRight: false,
     }
   },
   mounted() {
@@ -41,6 +45,14 @@ export default {
     
     if (this.small == true || this.small == '') {
       this.isSmall = true
+    } else if (this.small == "left") 
+    {
+      this.isSmall = true
+      this.isSmallLeft = true
+    } else if (this.small == "right") 
+    {
+      this.isSmall = true
+      this.isSmallRight = true
     }
   }
 };
@@ -87,5 +99,19 @@ export default {
 
 .w_button_small {
   width: 50%;
+}
+
+.w_button_left button {
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.w_button_right button {
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 </style>
