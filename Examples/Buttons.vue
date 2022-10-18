@@ -27,8 +27,20 @@ export default {
     <WButton radius>Rounds</WButton>
     <WTips>双排小按钮</WTips>
     <div class="flex">
-      <WButton small="left">Small</WButton>
-      <WButton small="right">Small</WButton>
+      <WButton small="left">Small Default</WButton>
+      <WButton type="primary" small="right">Small Primary</WButton>
     </div>
   </div>
 </template>
+
+<style lang="less" scoped>
+.gap {
+  gap: 10px;
+}
+.flex {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+</style>
